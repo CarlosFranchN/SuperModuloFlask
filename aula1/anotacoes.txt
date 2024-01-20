@@ -1,0 +1,76 @@
+mini framework para conectar o front e o back
+
+protocolo == HTTP == protocolo padrao para comunicação na web
+    - requisição feitas pelo cliente e as respostas sao envidados para o servidor
+    requisição == uma msg que um cliente  envia a um servidor para solicitar algum recurso /realizar ação
+    (entrar em site / enviar um dado / requisitar um dado do servidor)
+
+    Estruturas das requisição: 
+        Uma ação que o cliente deseja realizar sobre o recursos identificado
+        Metodos => GET POST PUT DELETE
+
+    URL: identifica o recurso especifico no servidor que esta sendo solicitado. Varios componentes como protocolo, dominio, caminho do recurso e parametros de consulta
+
+    HOST: especificar o servidor
+    User-Agent: Qual software esta sendo utilizado
+    Content-Type: Qual tipo de requisição
+
+    Respostas == codigos em especifico para saber oq esta "rolando" no servidor
+    
+        Status = (codigo 200 == Resposta bem sucedida)
+                 (Codigo 400 == erro do cliente)
+
+        Cabeçalho da resposta == 
+            COntent-type => tipo da midia (json ou algo asism)
+            Content-Length => indica o tamnho do corpo da resposta
+            Server => identificar o software do servidor
+        Corpo da Resposta ==
+            Contem dados reais enviados pelo servidor. Pode ser HTML, Json, imagens ou qualquer outro conteudo
+==============================================================
+
+Flask:
+    Microframework que faz integração entre o back e o front
+        Simples e facil de utilizar, com o conjunto minimo de utilidade de funcionalidades
+        - Leveza : leve e modular, nao impoe estrutura rigida e oferece Flexibilidade para os desenvolvedores escolham as ferramentas e bibliotecas
+        - Flexibilidade: Mais controle sobre as escolhas arquiteturas. Forçado a adotar uma estrutura especifica e pode escolher bibliotecas que melhor se adequam as necessidades
+        - Extensibilidade : Facilmente extensivel. Fornece base solida para construir e podem adicionar funcionalidades conforme necessario
+        - Sem componentes desnecessários
+
+    bibliotecas> 
+        Flask: Gerenciar tudo, gerenciamento de requisição e resposta controle do ciclo de vida da aplicação 
+        Werkzeug: biblioteca WSGI, manipulação de requisição, abstrair os detalhes de baixo nivel relacionado a manipulação do HTTP, para o  flask se concentrar mais nos especificos
+        Jinja2:  Mecanismo de TEMPLATES, responsavel pela renderização de pag HTML dinamicas permitindo a incoporação de logica de prog nas pag web.
+
+
+    Ambiente virtual: venv
+        para criar => python -m venv venv  
+                    venv\Scripts\activate
+                    cd venv
+
+
+
+    Eh possivel utilizarr o seu computador como um servidor(servidor embutido)
+        Para executar o servidor vc precisa utilizar o comando FLASK RUN no cmd
+
+        Em Ambientes de produção é comum utilizar servidores HTTP mais robustos e otimizados para alto desempenho( como GUNICORN ou uWSGI)
+    
+    ROTAS>
+        URL 
+        Responsaiveis por gerar a resposta HTTP apropriada para uma determinada requisição
+        Sempre utilizando funções para 
+        decorator = uma funçao especifica  para ser aplicada
+        -> @app.route()
+    ENDPOINTS>
+        Combinação unica de uma rota e um metodo HTTP especifico
+        Cada rota em FLASK pode ter multiplos endpoints associados a ela
+
+
+
+atividade home INTRO sobre vc   
+    Lista de habilidade
+    Sobre (breve historia sobre vc)
+
+    RECURSOS WEB: esta se referindo aos diferentes elementos que podem ser expostos e acessados atraves da aplicação web.
+        Esses recursos podem incluir pagians HTML, dados JSON, imagens, executar
+
+        HTML = utiliza mecanimo de TEMPLATE JINJA2 para renderizar pag html dinamicas. As paginas podem conter logica de prog embutida()
