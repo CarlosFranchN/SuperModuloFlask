@@ -1,0 +1,20 @@
+organização no flask das pastar
+    >static
+    >templates
+
+QUERY== parametros de consultas
+    > query parameters sao componentes de uma URL que contem dados especificos passados para o servidor como parte de um requisição HTTP
+        formato "chave:valor" sendo separados por &
+        -- utiliza uma biblioteca chamada REQUESTS
+        -- <http://localhost:5000/exemplo?nome=Joao&idade=25>
+
+PATH ==  parametro de caminho
+    > diz respeito a inclusao de variaveis dinamicas diretamente no caminho(URL) da rota.
+    > Os parametros sao capturados da URL e passados como argumento para a função associada
+    --<tipo: nome>
+    -- "/info/<nome>/<idade>"
+
+Formulario == 3 pontos importantes
+        >method <form action="/processar" method="post">
+        >Submit 
+        >Inputs
