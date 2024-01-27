@@ -18,3 +18,7 @@ Formulario == 3 pontos importantes
         >method <form action="/processar" method="post">
         >Submit 
         >Inputs
+
+
+pip freeze > bibliotecas.txt
+pip install -r bibliotecas.txt
