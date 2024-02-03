@@ -1,0 +1,14 @@
+Utilizar o JINJA para pegar recursos do PYTHON e colocar no HTML
+
+JINJA == 
+    =>um mecanismo de template usado em FLASK
+    => vc pode Utilizar variaveis para incorporar dados dinamicos em seu template
+    => variaveis sao definidas no codigo python e passadas para o templates
+
+    => em funções(condicional ou iteração) so precisa Utilizar uma {}, mas precisa finalizar
+        ex> {% if usuario %}
+                condição
+            {% else %}
+                condição
+            {% endif %}
+    => e as variaveis quando forem puxadas do PYHTON devem ser com duas {{}}
